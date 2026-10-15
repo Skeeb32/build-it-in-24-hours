@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f6f5f0" />
+    <meta name="description" content="A practical, 24-hour guided course for building a full-stack task management app." />
+    <title>Build It — 24-hour full-stack course</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to lesson</a>
+    <div class="app-shell">
+      <aside class="sidebar" id="course-sidebar" aria-label="Course navigation">
+        <a class="brand" href="#overview" aria-label="Build It course overview">
+          <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span>build it<span class="brand-dot">.</span></span>
+        </a>
+        <div class="sidebar-course">
+          <p class="eyebrow">YOUR COURSE</p>
+          <p class="course-name">Full-stack, from scratch</p>
+          <div class="progress-track"><span id="sidebar-progress-bar" role="progressbar" aria-label="Course completion" aria-valuemin="0" aria-valuemax="24" aria-valuenow="0"></span></div>
+          <p class="progress-caption"><span id="progress-count">0 of 24</span> lessons complete</p>
+        </div>
+        <nav class="lesson-nav" aria-label="Lessons">
+          <a class="overview-link" href="#overview" data-overview-link>
+            <span class="nav-icon" aria-hidden="true">⌂</span><span>Course overview</span>
+          </a>
+          <div class="nav-group-label"><span>THE 24-HOUR PLAN</span><span class="nav-group-line"></span></div>
+          <ol class="lesson-list" id="lesson-list"></ol>
+        </nav>
+        <div class="sidebar-footer"><span class="status-dot"></span> Built one step at a time</div>
+      </aside>
+
+      <div class="main-column">
+        <header class="topbar">
+          <button class="mobile-menu-button" id="mobile-menu-button" type="button" aria-expanded="false" aria-controls="course-sidebar" aria-label="Open lesson menu">☰</button>
+          <div class="breadcrumbs"><span>Learning path</span><span class="breadcrumb-slash">/</span><strong id="breadcrumb-current">Overview</strong></div>
+          <div class="topbar-tools">
+            <div class="search-wrap">
+              <label class="search-box" for="lesson-search">
+                <span aria-hidden="true">⌕</span><input id="lesson-search" type="search" placeholder="Find a lesson" autocomplete="off" />
+                <kbd>⌘ K</kbd>
+              </label>
+              <div class="search-popover" id="search-results" role="listbox" aria-label="Matching lessons" hidden></div>
+            </div>
+            <span class="time-chip"><span aria-hidden="true">◷</span> 24 hours</span>
+          </div>
+        </header>
+
+        <main id="main-content" tabindex="-1">
+          <div id="page-content" aria-live="polite"></div>
+        </main>
+        <footer class="site-footer"><span>Made for learning by doing.</span><span>Take a break. Then build the next piece.</span></footer>
+      </div>
+    </div>
+    <div class="sidebar-scrim" id="sidebar-scrim" hidden></div>
+  </body>
+</html>
